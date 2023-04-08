@@ -1380,6 +1380,23 @@ footer nav li:last-child {
   }
 }
 
+@media (max-width: 620px) {
+  .head__mid_left .Zipcode_search {
+    width: calc(100% - 88px);
+  }
+  .head__mid_left .Zipcode_search::after {
+    content: 'Search';
+    padding: 30px 10px;
+    right: -79px;
+  }
+  .head__mid_left .content h1 {
+    max-width: 100%;
+  }
+  .head__mid_left .content .text {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   body.lock {
     overflow: hidden;
@@ -1478,6 +1495,151 @@ footer nav li:last-child {
   }
   .head header nav.active {
     top: 0;
+  }
+  .head .Zipcode_search {
+    display: none;
+  }
+  .Partner_list {
+    width: auto;
+  }
+  .Partner_list li {
+    margin-top: 10px;
+  }
+  .HowItWorks__row {
+    margin-top: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .HowItWorks__column {
+    margin-top: 40px;
+    width: 80%;
+  }
+  .HowItWorks__column h5 {
+    margin-top: 20px;
+  }
+  .Feature__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Feature__top div {
+    width: 100%;
+    text-align: center;
+  }
+  .Feature__top .OrangeBtn {
+    margin: 0px auto;
+  }
+  .Feature__bottom_row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Feature__bottom_column {
+    margin-top: 30px;
+    width: 60%;
+  }
+  .Service__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .Service__content_description_block_column_valueblock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .Service__content_left {
+    width: 100%;
+    padding: 15px 15px 0px 15px;
+  }
+  .Service__content_right {
+    padding: 15px 5px 60px 5px;
+    margin-top: 120px;
+    width: 100%;
+  }
+  .Service__content_right h6 {
+    text-align: center;
+  }
+  .Service__content_right .description_text {
+    padding: 0px;
+    text-align: center;
+  }
+  .Testimonial__column_block .description_text {
+    margin-top: 20px;
+  }
+  .Testimonial__column_block_character {
+    margin-top: 30px;
+  }
+  .Testimonial__bottom .Partner_list {
+    width: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Testimonial__bottom span {
+    min-width: auto;
+    width: auto;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+  .Newsletter__top {
+    text-align: center;
+  }
+  .Newsletter__mid_form {
+    width: 100%;
+  }
+  footer {
+    padding: 40px 10px 20px 10px;
+  }
+  footer div .header__nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer div .header__nav li {
+    margin: 0px 0px;
+  }
+}
+
+@media (max-width: 570px) {
+  .Newsletter__top {
+    text-align: center;
+  }
+  .Newsletter__mid_form {
+    width: 100%;
+    height: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .Newsletter__mid_form input {
+    margin-top: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

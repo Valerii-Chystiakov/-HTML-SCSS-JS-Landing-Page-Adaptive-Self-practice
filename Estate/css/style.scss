@@ -938,7 +938,33 @@ footer{
 		}
 	}
 }
-
+@media (max-width:620px) {
+	.head{
+		&__mid{
+			&_left{
+				& .Zipcode_search{
+					width: calc(100% - 88px);
+					&::after{
+						content: 'Search';
+						padding: 30px 10px;
+						right: -79px;
+					}
+				}
+				& .content{
+					h1{
+						max-width: 100%;
+					}
+					.text{
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}	
+}
+@media (max-width:505px) {
+//search btn
+}
 @media (max-width:768px) {
 	body.lock{
 		overflow: hidden;
@@ -1036,23 +1062,139 @@ footer{
 				}
 			}
 		}
+		& .Zipcode_search{
+			display: none;
+		}
+	}
+	.Partner_list{
+		width: auto;
+		& li{
+			margin-top: 10px;
+		}
 	}
 	.HowItWorks{
-
+		&__row{
+			margin-top: 5px;
+			flex-flow: column nowrap;
+			align-items: center;
+		}
+		&__column{
+			margin-top: 40px;
+			width: 80%;
+			& h5{
+				margin-top: 20px;
+			}
+		}
 	}
 	.Feature{
+		&__top{
+			flex-flow: column nowrap;
+			align-items: center;
+			justify-content: center;
+
+			& div{
+				width: 100%;
+				text-align: center;
+			}
+			& .OrangeBtn{
+				margin: 0px auto;
+			}
+		}
+		&__bottom{
+			&_row{
+				flex-flow: column nowrap;
+				align-items: center;
+			}
+			&_column{
+				margin-top: 30px;
+				width: 60%;
+			}
+		}
 
 	}
 	.Service{
-
+		&__content{
+			&_description_block_column_valueblock{
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+			}
+			flex-flow: column nowrap;
+			&_left{
+				width: 100%;
+				padding: 15px 15px 0px 15px;
+			}
+			&_right{
+				padding: 15px 5px 60px 5px;
+				margin-top: 120px;
+				width: 100%;
+				& h6{
+					text-align: center;
+				}
+				& .description_text{
+					padding: 0px;
+					text-align: center;
+				}	
+			}			
+		}
 	}
 	.Testimonial{
-
+		&__column_block{
+			& .description_text{
+				margin-top: 20px;
+			}
+			&_character{
+				margin-top: 30px;
+			}
+		}
+		&__bottom{
+			& .Partner_list{
+				width: auto;
+				justify-content: center;
+			}
+			& span{
+				min-width: auto;
+				width: auto;
+				max-width: fit-content;
+			}
+		}
 	}
 	.Newsletter{
-
+		&__top{
+			text-align: center;
+		}
+		&__mid_form{
+			width: 100%;
+		}
 	}
 	footer{
-
+		padding: 40px 10px 20px 10px;
+		& div{
+			.header{
+				&__nav{
+						justify-content: center;
+					& li{
+						margin: 0px 0px;
+						
+					}
+				}	
+			}
+		}
 	}
+}
+
+@media (max-width:570px) {
+	.Newsletter{
+		&__top{
+			text-align: center;
+		}
+		&__mid_form{
+			width: 100%;
+			height: 100px;
+			flex-flow: column nowrap;
+			& input{
+				margin-top: 20px;
+			}
+		}
+	}	
 }
