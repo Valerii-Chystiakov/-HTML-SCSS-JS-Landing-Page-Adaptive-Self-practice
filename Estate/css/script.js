@@ -43,13 +43,13 @@ function ToggleActiveArrow() {
 function RightArrowImgChange() {
     if (RightArrow.classList.contains('ArrowButtonUnActive')){
         ToggleActiveArrow()
-        OfficeImg.src = "/css/img/head/head_image_2.jpg"
+        OfficeImg.src = "../css/img/head/head_image_2.jpg"
     }
 }
 function LeftArrowImgChange() {
     if (LeftArrow.classList.contains('ArrowButtonUnActive')){
         ToggleActiveArrow()
-        OfficeImg.src = "/css/img/head/head_image.png"
+        OfficeImg.src = "../css/img/head/head_image.png"
     }
 }
 
@@ -63,6 +63,7 @@ const home = document.querySelector('.head');
 const GoToHomeBTN = document.querySelectorAll('.GoToHome');
 GoToHomeBTN.forEach(element => {
   element.addEventListener('click', () => {
+    TurnOffBurger(),
       home.scrollIntoView({
         block: "start",
         inline: "start",
@@ -75,6 +76,7 @@ const about = document.querySelector('.HowItWorks');
 const GoToAboutBTN = document.querySelectorAll('.GoToAbout');
 GoToAboutBTN.forEach(element => {
   element.addEventListener('click', () => {
+    TurnOffBurger(),
       about.scrollIntoView({
         block: "center",
         inline: "center",
@@ -87,6 +89,7 @@ const service = document.querySelector('.Feature');
 const GoToServiceBTN = document.querySelectorAll('.GoToService');
 GoToServiceBTN.forEach(element => {
   element.addEventListener('click', () => {
+    TurnOffBurger(),
       service.scrollIntoView({
         block: "center",
         inline: "center",
@@ -99,6 +102,7 @@ const portfolio = document.querySelector('.Service');
 const GoToPortfolioBTN = document.querySelectorAll('.GoToPortfolio');
 GoToPortfolioBTN.forEach(element => {
   element.addEventListener('click', () => {
+    TurnOffBurger(),
       portfolio.scrollIntoView({
         block: "start",
         inline: "start",
@@ -111,6 +115,7 @@ const blog = document.querySelector('.Testimonial');
 const GoToBlogBTN = document.querySelectorAll('.GoToBlog');
 GoToBlogBTN.forEach(element => {
   element.addEventListener('click', () => {
+    TurnOffBurger(),
       blog.scrollIntoView({
         block: "center",
         inline: "center",
@@ -123,6 +128,7 @@ const contact = document.querySelector('.Newsletter');
 const GoToContactBTN = document.querySelectorAll('.GoToContact');
 GoToContactBTN.forEach(element => {
   element.addEventListener('click', () => {
+    TurnOffBurger(),
       contact.scrollIntoView({
         block: "center",
         inline: "center",
@@ -135,10 +141,17 @@ GoToContactBTN.forEach(element => {
 
 const BurgerBTN = document.querySelector('.burger')
 const header_menu = document.querySelector('.header__menu')
+const body = document.querySelector('body')
 
 function ToggleBurger(){
   BurgerBTN.classList.toggle('active')
   header_menu.classList.toggle('active')
+  body.classList.toggle('lock')
+}
+function TurnOffBurger(){
+  BurgerBTN.classList.remove('active')
+  header_menu.classList.remove('active')
+  body.classList.remove('lock')
 }
 
 BurgerBTN.addEventListener('click', ToggleBurger)

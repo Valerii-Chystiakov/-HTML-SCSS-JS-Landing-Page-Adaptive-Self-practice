@@ -86,14 +86,14 @@ h6{
 	max-height: 1200px;
 	min-height: 710px;
 	&__bg{
-		background: url('/css/img/bg.jpg') right/35% 100% no-repeat;
+		background: url('../css/img/bg.jpg') right/35% 100% no-repeat;
 		position: absolute;
 		z-index: -1;
 		width: 100%;
 		height: 100%;
 		max-height: 1200px;
 	}
-	background: url('/css/img/bg.jpg') right/35% 100% no-repeat;	
+	background: url('../css/img/bg.jpg') right/35% 100% no-repeat;	
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-between;
@@ -203,7 +203,7 @@ h6{
 
 					}
 					&::before{
-						content: url('/css/img/head/icon_house.svg');
+						content: url('../css/img/head/icon_house.svg');
 						z-index: 1;
 						position: absolute;
 						display: flex;
@@ -217,7 +217,7 @@ h6{
 				&::after{
 					content: 'Search Now!';
 					right: -185.5px;
-					z-index: 3;
+					z-index: 20;
 					position: absolute;
 					padding: 30px 40px;
 					background-color: #F85A47;
@@ -940,12 +940,16 @@ footer{
 }
 
 @media (max-width:768px) {
+	body.lock{
+		overflow: hidden;
+	}
 	.burger{
 		display: block;
 		position: relative;
 		min-width: 30px;
 		height: 20px;
 		z-index: 12;
+		justify-self: right;
 		&::before,&::after{
 			content: '';
 			background-color: #000;
@@ -968,20 +972,45 @@ footer{
 			width: 100%;
 			height: 2.5px;
 			top: 9px;
+			
 		}
+		&.active{
+			&::before{
+				transform: rotate(45deg);
+				transition: all 0.3s ease;
+
+				top: 9px;
+
+			}
+			&::after{
+				transform: rotate(-45deg);
+				transition: all 0.3s ease;
+
+				bottom: 9px;
+			}
+			& > span{
+				transform: scale(0);
+				transition: transform 1s ease;
+				
+			}
+		}
+
 	}
 	.head{
 		& header{
 			& nav{
+				overflow-x: hidden;
+				overflow-y: auto;
 				position: fixed;
-				top: 0;
+				top: -100%;
+				transition: all 0.3s ease;
 				right: 0;
-				width: 250px;
+				width: auto;
 				height: 100%;
 				background-color: #BDCCFF;
 				z-index: 10;
 				& ul{
-					margin-top: 40px;
+					margin-top: 80px;
 					flex-flow: column nowrap;
 					& li{
 						margin: 5px;
@@ -1001,6 +1030,9 @@ footer{
 							background-color: #4f4f4f;
 						}
 					}
+				}
+				&.active{
+					top:0;
 				}
 			}
 		}
