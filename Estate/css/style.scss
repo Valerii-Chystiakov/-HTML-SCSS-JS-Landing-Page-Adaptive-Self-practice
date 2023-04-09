@@ -79,9 +79,6 @@ h6{
 		padding: 0px 3vw;
 	}
 }
-.burger{
-
-}
 .head {
 	max-height: 1200px;
 	min-height: 710px;
@@ -962,9 +959,6 @@ footer{
 		}
 	}	
 }
-@media (max-width:505px) {
-//search btn
-}
 @media (max-width:768px) {
 	body.lock{
 		overflow: hidden;
@@ -1197,4 +1191,52 @@ footer{
 			}
 		}
 	}	
+}
+@media (max-width:425px) {
+	.head__bottom_flex-block{
+		& .Partner_list{
+			justify-self: center;
+			& li{
+				&:first-child{
+					margin-left: 15px;
+				}
+				&:last-child{
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+	.Feature{
+		&__mid__list{
+			flex-flow: row wrap;
+			justify-content: center;
+			& li{
+				margin: 0px 30px;
+				&:last-child{
+					margin-right: 30px;
+				}
+				&:first-child{
+					margin-left: 30px;
+				}
+			}
+		}
+	}
+	footer{
+		& nav{
+			& .header__nav{
+				flex-flow: column nowrap;
+				& li{
+					& span{
+						margin: 5px 0px 0px 0px;
+					}
+					&:last-child{
+						margin-right: 0px;
+					}
+					&:first-child{
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
 }
