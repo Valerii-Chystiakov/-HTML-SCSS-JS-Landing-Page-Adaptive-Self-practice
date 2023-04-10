@@ -185,7 +185,7 @@ h6 {
 .head {
   max-height: 1200px;
   min-height: 710px;
-  background: url("../css/img/bg.jpg") right/35% 100% no-repeat;
+  background: url("../img/bg.jpg") right/35% 100% no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,7 +203,7 @@ h6 {
 }
 
 .head__bg {
-  background: url("../css/img/bg.jpg") right/35% 100% no-repeat;
+  background: url("../img/bg.jpg") right/35% 100% no-repeat;
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -365,7 +365,7 @@ h6 {
 }
 
 .head__mid_left .Zipcode_search_LabelInput::before {
-  content: url("../css/img/head/icon_house.svg");
+  content: url("img/head/icon_search.svg");
   z-index: 1;
   position: absolute;
   display: -webkit-box;
